@@ -26,6 +26,7 @@ namespace server.Controllers
         }
 
         //http://localhost:5000/api/Calculation/GetCalcHistory
+        //get all the Calc History list
         [HttpGet("api/[controller]/GetCalcHistory")]
         public IActionResult GetCalcHistory()
         {
@@ -40,7 +41,7 @@ namespace server.Controllers
             }
         }
 
-
+        //Insert new Calculation
         [HttpPost("api/[controller]/InsertCalc")]
         public IActionResult InsertCalc(Calculation calc_obj)
         {
@@ -55,7 +56,7 @@ namespace server.Controllers
             }
         }
 
-
+        //delete Calculation
         [HttpDelete("api/[controller]/DeleteCalc")]
         public IActionResult DeleteCalc(Calculation calc_obj)
         {
@@ -77,7 +78,7 @@ namespace server.Controllers
         }
 
 
-
+        //Edit Calculation
         [HttpPut("api/[controller]/EditCalc")]
         public IActionResult EditCalc(Calculation calc_obj)
         {

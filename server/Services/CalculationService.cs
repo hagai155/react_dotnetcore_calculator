@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 
-
 namespace server.Services
 {
 
@@ -49,6 +48,7 @@ namespace server.Services
         {
             try
             {
+                //insert new Calculation obj. use the Guid to get unique id
                 calc_obj.result = CalcProcess(calc_obj);
                 calc_obj.calcID = Guid.NewGuid().ToString();
                 global_calc_list.Add(calc_obj);
@@ -143,6 +143,7 @@ namespace server.Services
         {
             return num1 * num2;
         }
+        //Subtract two double and retuns the result
         public double Subtract(double num1, double num2)
         {
             return num1 - num2;
