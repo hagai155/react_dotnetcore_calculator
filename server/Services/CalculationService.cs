@@ -135,7 +135,7 @@ namespace server.Services
         // Add two double and returns the sum  
         public double Add(double num1, double num2)
         {
-            return num1 + num2;
+            return num1 + num2;//
         }
 
         // Multiply two double and retuns the result  
