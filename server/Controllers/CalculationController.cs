@@ -77,7 +77,6 @@ namespace server.Controllers
             }
         }
 
-
         //Edit Calculation
         [HttpPut("api/[controller]/EditCalc")]
         public IActionResult EditCalc(Calculation calc_obj)
@@ -98,7 +97,5 @@ namespace server.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
-
     }
 }
