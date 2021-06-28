@@ -13,9 +13,9 @@ function Home() {
   const [isLoading, setIsLoading] = useState(false);
   const [res_display, setRes_display] = useState(false);
   //the edit states
-  const [inputValue1_edit, setInputValue1_edit] = useState(0);
-  const [inputValue2_edit, setInputValue2_edit] = useState(0);
-  const [inputCalcType_edit, setinputCalcType_edit] = useState("+");
+  const [inputValue1_edit, setInputValue1_edit] = useState("");
+  const [inputValue2_edit, setInputValue2_edit] = useState("");
+  const [inputCalcType_edit, setinputCalcType_edit] = useState("");
   const [calcID_edit, setcalcID_edit] = useState(null);
 
   //on load - useEffect get the calc history list
@@ -101,9 +101,9 @@ function Home() {
         });
     }
     //reset the edit state
-    setInputValue1_edit(0);
-    setInputValue2_edit(0);
-    setinputCalcType_edit("+");
+    setInputValue1_edit("");
+    setInputValue2_edit("");
+    setinputCalcType_edit("");
     setcalcID_edit(null);
     setRes_display("");
   };
@@ -146,6 +146,7 @@ function Home() {
           <MainCalculator
             handleOnclick={onCalcClick}
             result_display={res_display}
+            setRes_display={setRes_display}
             input1prop={inputValue1_edit}
             input2prop={inputValue2_edit}
             inputCalcTypeprop={inputCalcType_edit}
